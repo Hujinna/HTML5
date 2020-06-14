@@ -12,16 +12,9 @@
             margin: 0;
             padding: 0;
         }
-        
-        @media screen and (max-width: 768px) {
-            #top {
-                display: none;
-            }
-        }
-        
-        body {
-            overflow-x: hidden;
-        }
+        /* body {
+            overflow: hidden;
+        } */
         
         #top1 a {
             color: white;
@@ -67,7 +60,7 @@
         }
         
         .banner img {
-            width: 100%;
+            /* width: 100%; */
             position: absolute;
             z-index: -2;
             background-repeat: no-repeat;
@@ -83,7 +76,7 @@
         }
         
         .search {
-            width: 40%;
+            width: 500px;
             margin: 100px auto;
             display: flex;
             position: relative;
@@ -244,6 +237,19 @@
             padding: 67px;
         }
         
+        .imgs2 #youshi p {
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            color: b;
+            line-height: 40px;
+        }
+        
+        .imgs2 #m2 {
+            position: relative;
+            top: -300px;
+        }
+        
         .san {
             background-color: rgb(28, 80, 128);
             height: 400px;
@@ -270,7 +276,7 @@
         
         .san2 img {
             margin-top: 160px;
-            margin-left: 125px;
+            margin-left: 175px;
         }
         
         .san3 img {
@@ -279,6 +285,7 @@
         }
         
         .san2 {
+            width: 300px;
             position: relative;
             top: -400px;
             left: 400px;
@@ -325,6 +332,105 @@
             color: white;
             font-size: 16px;
         }
+        
+        @media screen and (max-width: 768px) {
+            #top {
+                display: none;
+            }
+            .banner img {
+                height: 360px;
+                width: auto;
+            }
+            .banner p {
+                position: relative;
+                font-size: 30px;
+                left: 30px;
+            }
+            .p1 {
+                display: none;
+            }
+            .banner2 {
+                height: 200px;
+            }
+            .banner2 p {
+                position: relative;
+                left: -1px;
+                color: black;
+            }
+            .banner2 #p1 {
+                color: rgb(28, 80, 128);
+            }
+            .banner2-2 #div {
+                position: relative;
+                color: black;
+                border-color: black;
+                left: -600px;
+                top: 10px;
+            }
+            .imgs {
+                top: 200px;
+            }
+            .imgs2 {
+                top: 1200px;
+            }
+            .imgs2 #m2 {
+                position: relative;
+                top: 0px;
+            }
+            #youshi {
+                background-color: white;
+                position: relative;
+                left: -100px;
+                top: 1px;
+            }
+            .imgs2 #youshi p {
+                color: black;
+            }
+            .imgs2 #m2 {
+                position: relative;
+                top: -40px;
+            }
+            .san {
+                top: 0px;
+                background-color: white;
+            }
+            .san div {
+                width: 540px;
+                height: 80px;
+                position: relative;
+                display: block;
+                border-bottom: 1px solid #ccc;
+            }
+            .san div p {
+                position: relative;
+                left: 150px;
+                text-align: left;
+                color: black;
+            }
+            .san2 {
+                top: 40px;
+                left: 0px;
+            }
+            .san3 {
+                top: 80px;
+                left: 0px;
+            }
+            .bottom {
+                height: 100px;
+                position: relative;
+                top: 2400px;
+                z-index: -2;
+            }
+            .bottom1 {
+                display: none;
+            }
+            .bottom2 p {
+                height: 14px;
+                position: relative;
+                top: 50px;
+                left: 80px;
+            }
+        }
     </style>
 </head>
 
@@ -364,45 +470,22 @@
     <div class='banner'>
         <img class='img-responsive' src='img/banner.jpg'>
         <p>悠游古欧洲 遍览法瑞意</p>
-        <div style="width: 400px; height: 1px; background: white; position:relative; top:80px; left:160px"></div>
-        <p style='font-size: 25px;'>巴黎卢浮宫、塞纳河游船、凡尔赛宫</p>
-        <p style='font-size: 25px;'>少女峰、大运河游船，金色列车、西庸城堡</p>
-        <div style="width: 500px; height: 1px;position:relative; background: white;left: 160px;top:80px"></div>
+        <div class='p1' style="width: 400px; height: 1px; background: white; position:relative; top:80px; left:160px"></div>
+        <p class='p1' style='font-size: 25px;'>巴黎卢浮宫、塞纳河游船、凡尔赛宫</p>
+        <p class='p1' style='font-size: 25px;'>少女峰、大运河游船，金色列车、西庸城堡</p>
+        <div class='p1' style="width: 500px; height: 1px;position:relative; background: white;left: 160px;top:80px"></div>
         <div class="search" style="position: relative;top:50px">
             <button class="button-left">目的地</button>
             <input type="text" placeholder="|   日本  美国  英国  地中海" name="" id="" value="" />
             <button class="button-right"></button>
         </div>
-        <!-- <div class="search">
-            <input type="button" class="des" value="目的地" />
-            <input type="text" class="search_input" placeholder="|  日本  美国  英国  地中海" />
-            <input type="button" class="search_btn" />
-        </div> -->
-        <!-- <div class='btn-group'>
-            <button type='button' class='btn btn-lg'>
-                <img src='img/position.png' alt=''> 
-                目的地</button>
-            <button type='button' class='btn btn-default btn-lg'>|  日本  美国  英国  地中海</button>
-            <button type='button' class='btn btn-lg'>
-                <img src='img/search.png' alt=''>
-            </button>
-
-        </div> -->
-        <!-- <from class='form-inline'>
-            <div class="from-group btn-group">
-                <button type=""></button>
-                <input type="button" class='form-control' placeholder="目的地">
-                <input type="text" class='form-control' placeholder="|  日本  美国  英国  地中海" />
-                <input type="search" class='form-control' placeholder="目的地">
-            </div> 
-        </from> -->
     </div>
     <!-- banner2 -->
     <div class='container'>
         <div class='banner2'>
-            <img class='img-responsive' src='img/Sbanner2.jpg' />
-            <p>机场接送 省心省钱</p>
-            <p style='font-size: 20px;'>巴提供上海、苏州、无锡各式</p>
+            <img class='img-responsive p1' src='img/Sbanner2.jpg' />
+            <p id='p1'>机场接送 省心省钱</p>
+            <p style='font-size: 20px;'>提供上海、苏州、无锡各式</p>
             <p style='font-size: 20px;'>往返机场、码头接送服务，更有包车服务</p>
             <div class='banner2-2'>
                 <p id='car' style="font-size: 20px;">车辆接送</p>
@@ -412,9 +495,9 @@
     </div>
     <!-- 热门路线 -->
     <div class='container'>
-        <div class='title1'>
-            <h2 class="h2">热 门 路 线</h2>
-            <h4 class='h4'>Popular tourist routes</h4>
+        <div class='title1 p1'>
+            <h2 class="h2">热 门 线 路</h2>
+            <h4 class='h4 p1'>Popular tourist routes</h4>
         </div>
         <div class='imgs'>
             <div class='row'>
@@ -437,14 +520,13 @@
                 <div class='col-md-6'>
                     <div class='row'>
                         <div class='col-md-12'>
-                            <img src='img/hot3.jpg' />
-                            <!-- <div class="hot3"></div> -->
+                            <img class="p1" src='img/hot3.jpg' />
                         </div>
                         <div class='col-md-12'>
-                            <img src='img/hot4.jpg' />
+                            <img class="p1" src='img/hot4.jpg' />
                         </div>
                         <div class='col-md-12'>
-                            <img src='img/hot5.jpg' />
+                            <img class="p1" src='img/hot5.jpg' />
                         </div>
                     </div>
                 </div>
@@ -453,33 +535,33 @@
     </div>
     <!-- 使命与愿景 -->
     <div class="container">
-        <div class='title2'>
+        <div class='title2 p1'>
             <h2 class="h2">使命与愿景</h2>
-            <h4 class='h4' style="margin-left: 510px;"> 让旅游回归本质，体验纯粹旅游</h4>
+            <h4 class='h4 p1' style="margin-left: 510px;"> 让旅游回归本质，体验纯粹旅游</h4>
         </div>
         <div class='imgs2'>
             <img class='img-responsive' src='img/mission1.jpg' />
             <div id='youshi'>
-                <p style="text-align: center;font-size: 20px;color: white;line-height: 40px;">服务理念及优势</p>
-                <p style="font-size: 16px;color: white;line-height: 30px;"> “英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个多家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。</p>
+                <p>服务理念及优势</p>
+                <p style="font-size: 16px;line-height: 30px;"> “英华逸游”通过重新打造旅游全程中的产品线路设计、出行交通方案、陪游向导服务、增值关怀项目等，为客户提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个多家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。</p>
             </div>
-            <img style='position: relative;top:-340px;' class='img-responsive' src='img/mission2.jpg' />
+            <img id='m2' class='img-responsive' src='img/mission2.jpg' />
             <div class='san'>
                 <div class='san1'>
-                    <img src='img/icon1.png' />
-                    <p style="margin-top: 10px;margin-bottom: 60px;">品质行程</p>
+                    <img class='p1' src='img/icon1.png' />
+                    <p class='p1' style="margin-top: 10px;margin-bottom: 60px;">品质行程</p>
                     <p>旅游达人精心设计、基于口碑反复打磨，</p>
                     <p>全网最好，敢跟任何产品比</p>
                 </div>
-                <div class='san2' style="width: 300px;">
-                    <img src='img/icon2.png' />
-                    <p style="margin-top: 10px;margin-bottom: 50px;">品质消费</p>
+                <div class='san2'>
+                    <img class='p1' src='img/icon2.png' />
+                    <p class='p1' style="margin-top: 10px;margin-bottom: 50px;">品质消费</p>
                     <p>不推自费，</p>
                     <p>不进垃圾购物点和伪景点</p>
                 </div>
                 <div class='san3'>
-                    <img src='img/icon3.png' />
-                    <p style="margin-top: 10px;margin-bottom: 60px;">品质小团</p>
+                    <img class='p1' src='img/icon3.png' />
+                    <p class='p1' style="margin-top: 10px;margin-bottom: 60px;">品质小团</p>
                     <p>独立成团不散拼，</p>
                     <p>只跟亲朋好友一起玩，每天发团</p>
                 </div>
